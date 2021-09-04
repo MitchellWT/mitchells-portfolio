@@ -11,7 +11,7 @@ export default function Contact() {
             <NameDisk/>
 
             <div className='main'>
-                <div className={ContactStyle.top}>
+                <div>
                     <h2 className='title'>CONTACT</h2>
 
                     <div className={ContactStyle.divider}>

@@ -30,7 +30,7 @@ export default function Projects({data}) {
                         )
                     }
                 })}
-                {data.allStrapiProject.nodes.length != 0 ? <div className='subtitle'>Nothing here...?</div> : ''}
+                {data.allStrapiProject.nodes.length == 0 ? <h3 className='subtitle'>Nothing here...?</h3> : ''}
             </div>
         </DefaultLayout>
     )
