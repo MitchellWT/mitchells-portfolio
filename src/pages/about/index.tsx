@@ -2,32 +2,58 @@ import React from 'react'
 import {graphql} from 'gatsby'
 import DefaultLayout from '../../layouts/Default'
 import * as AboutStyle from '../../styles/about.module.scss'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 export default function About({data}) {
+    data = data.allStrapiAbout.nodes[0]
     return (
         <DefaultLayout>
             <div>
-                <h2>ABOUT</h2>
+                <h2 className='title'>ABOUT</h2>
                 
                 <div className={AboutStyle.floatingImageContainer}>
                     <div className={AboutStyle.floatingContainer}>
-                        <div className={AboutStyle.floatingLayerZero}>
-                        </div>
-
-                        <div className={AboutStyle.floatingLayerOne}>
-                        </div>
-
-                        <div className={AboutStyle.floatingLayerTwo}>
-                        </div>
-
-                        <div className={AboutStyle.floatingLayerImage}>
-                        </div>
+                        {data.frames.map((frame, index) => {
+                            if (frame.alternativeText == 'red_frame') {
+                                return (
+                                    <GatsbyImage
+                                        image={frame.localFile.childImageSharp.gatsbyImageData}
+                                        alt={frame.alternativeText}
+                                        className={AboutStyle.floatingLayerZero}
+                                        key={index} />
+                                )
+                            } else if (frame.alternativeText == 'blue_frame') {
+                                return (
+                                    <GatsbyImage
+                                        image={frame.localFile.childImageSharp.gatsbyImageData}
+                                        alt={frame.alternativeText}
+                                        className={AboutStyle.floatingLayerOne}
+                                        key={index}/>
+                                )
+                            } else if (frame.alternativeText == 'green_frame') {
+                                return (
+                                    <GatsbyImage
+                                        image={frame.localFile.childImageSharp.gatsbyImageData}
+                                        alt={frame.alternativeText}
+                                        className={AboutStyle.floatingLayerTwo}
+                                        key={index}/>
+                                )
+                            } else if (frame.alternativeText == 'front_frame') {
+                                return (
+                                    <GatsbyImage
+                                        image={frame.localFile.childImageSharp.gatsbyImageData}
+                                        alt={frame.alternativeText}
+                                        className={AboutStyle.floatingLayerImage}
+                                        key={index}/>
+                                )
+                            } 
+                        })}
                     </div>
                 </div>
 
                 <div className={AboutStyle.aboutTextContainer}>
                     <p className={AboutStyle.aboutParagraph}>
-                        {data.allStrapiAbout.nodes[0].body}
+                        {data.body}
                     </p> 
                 </div>
             </div>
@@ -40,7 +66,15 @@ query AboutQuery {
     allStrapiAbout(limit: 1) {
         nodes {
             body
+            frames {
+                localFile {
+                childImageSharp {
+                    gatsbyImageData
+                    }
+                }
+                alternativeText
+            }
         }
     }
-}  
+}
 `

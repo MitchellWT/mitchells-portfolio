@@ -9,7 +9,7 @@ export default function Projects({data}) {
     return (
         <DefaultLayout>
             <div>
-                <h2>PROJECTS</h2>
+                <h2 className='title'>PROJECTS</h2>
             </div>
 
             <div>
@@ -23,10 +23,14 @@ export default function Projects({data}) {
                         }
 
                         return (
-                            <ProjectContainer projectBriefs={projectBriefThreeCount} left={isLeft}/>
+                            <ProjectContainer 
+                                projectBriefs={projectBriefThreeCount} 
+                                left={isLeft}
+                                key={index}/>
                         )
                     }
                 })}
+                {data.allStrapiProject.nodes.length != 0 ? <div className='subtitle'>Nothing here...?</div> : ''}
             </div>
         </DefaultLayout>
     )
@@ -39,7 +43,7 @@ query ProjectBriefQuery {
             cover_image {
                 localFile {
                     childImageSharp {
-                        gatsbyImageData(width: 800, height: 500)
+                        gatsbyImageData(width: 960, height: 540)
                     }
                 }
                 alternativeText

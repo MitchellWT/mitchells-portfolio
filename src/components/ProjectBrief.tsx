@@ -6,7 +6,7 @@ import * as ProjectBriefStyle from '../styles/projectbrief.module.scss'
 export default function ProjectBrief({briefData, main=false}) {
     if (briefData) {
         return (
-            <Link to={'/project/' + briefData.slug} className={`${ProjectBriefStyle.projectMainLink}
+            <Link to={'/projects/' + briefData.slug} className={`${ProjectBriefStyle.projectMainLink}
                                                                 ${main ? '' : ProjectBriefStyle.projectSubLink}`}>
                 <div className={ProjectBriefStyle.projectDiv}>
                     <GatsbyImage 

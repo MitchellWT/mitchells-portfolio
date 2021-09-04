@@ -12,7 +12,7 @@ export default function Contact() {
 
             <div className='main'>
                 <div className={ContactStyle.top}>
-                    <h2>CONTACT</h2>
+                    <h2 className='title'>CONTACT</h2>
 
                     <div className={ContactStyle.divider}>
                         <p>01001000</p>

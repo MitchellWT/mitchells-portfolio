@@ -5,7 +5,7 @@ export default function Blog() {
     return (
         <DefaultLayout>
             <div>
-                <h2 className='comingSoon'>COMING SOON</h2>
+                <h2 className='comingSoon title'>COMING SOON</h2>
             </div>
         </DefaultLayout>
     )

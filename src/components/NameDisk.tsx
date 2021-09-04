@@ -41,7 +41,6 @@ function DiskWithName() {
 export default function NameDisk() {
     return (
         <Canvas camera={{fov: 70, near: 0.1, far: 1000, position: [0, 0, 3.5]}} className={NameDiskStyle.nameDisk}>
-            
             <DiskWithName />
         </Canvas>
     )

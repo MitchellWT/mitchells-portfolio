@@ -7,7 +7,7 @@ export default function Footer() {
         <footer className={FooterStyle.footerContainer}>
             <div className={FooterStyle.bottomText}>
                 <div>
-                    <h1>
+                    <h1 className={FooterStyle.headerText}>
                         <a href='mailto:mitchell444999@protonmail.com'>mitchell444999@protonmail.com</a>
                     </h1>
                 </div>
@@ -15,7 +15,7 @@ export default function Footer() {
                 <div className={FooterStyle.footerDivider}></div>
 
                 <div>
-                    <h1>
+                    <h1 className={FooterStyle.headerText}>
                         <a href="https://github.com/MitchellWT">GITHUB</a>
                     </h1>
                 </div>
