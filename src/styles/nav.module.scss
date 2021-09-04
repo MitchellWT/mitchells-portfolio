@@ -2,11 +2,6 @@ $nav-index: 10;
 
 // HTML Elements
 
-h1 {
-    font-weight: 100;
-    font-size: 1.5em;
-}
-
 a:link, a:visited {
     text-decoration: none;
     color: #aaaaaa;
@@ -133,6 +128,11 @@ a:hover {
 
 .handburgerActiveLink {
     color: #ffffff !important;
+}
+
+.navItem {
+    font-weight: 100;
+    font-size: 1.5em;
 }
 
 // Mobile

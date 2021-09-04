@@ -1,0 +1,18 @@
+// Classes
+
+.projectImage {
+    height: 750px;
+}
+
+.projectTextContainer {
+    margin: auto;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    max-width: 750px;
+    justify-content: center;
+}
+
+.projectParagraph {
+    text-align: justify;
+}

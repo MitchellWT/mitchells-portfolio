@@ -26,8 +26,20 @@ $footer-index: 0;
     align-items: center;
 }
 
+.headerText {
+    font-size: 1.5em;
+}
+
 .footerDivider {
     min-width: 25%;
     min-height: 1px;
     background-color: #aaaaaa;
+}
+
+// Mobile
+
+@media only screen and (max-width: 600px) {
+    .headerText {
+        font-size: 1.25em;
+    }
 }
