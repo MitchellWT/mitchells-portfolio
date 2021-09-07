@@ -7,7 +7,8 @@ import * as IndexStyle from '../styles/index.module.scss'
 export default function Index({data}) {
     data = data.allStrapiIndex.nodes[0]
     return (
-        <DefaultLayout>
+        <DefaultLayout title="MT | Index" description="Mitchell Tsutsulis's portfolio website. This website showcases some of the project developed by Mitchell, using a variety of technologies." 
+                       keywords="Mitchell Tsutsulis, portfolio, software, technology" isPost={false}>
             <div>
                 <h2 className={`${IndexStyle.name} title`}>MITCHELL TSUTSULIS</h2>
                 
