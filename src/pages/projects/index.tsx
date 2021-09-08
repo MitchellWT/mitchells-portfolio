@@ -5,9 +5,10 @@ import DefaultLayout from '../../layouts/Default'
 
 export default function Projects({data}) {
     let isLeft = false;
-
+    let title = 'MT | Projects'
     return (
-        <DefaultLayout>
+        <DefaultLayout title={title} description=''
+                       keywords='' isPost={false} index={false}>
             <div>
                 <h2 className='title'>PROJECTS</h2>
             </div>

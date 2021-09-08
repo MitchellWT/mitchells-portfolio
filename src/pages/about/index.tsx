@@ -6,8 +6,10 @@ import { GatsbyImage } from 'gatsby-plugin-image'
 
 export default function About({data}) {
     data = data.allStrapiAbout.nodes[0]
+    let title = 'MT | About'
     return (
-        <DefaultLayout>
+        <DefaultLayout title={title} description=''
+                       keywords='' isPost={false} index={false}>
             <div>
                 <h2 className='title'>ABOUT</h2>
                 

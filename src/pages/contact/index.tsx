@@ -5,9 +5,10 @@ import * as ContactStyle from '../../styles/contact.module.scss'
 
 export default function Contact() {
     const pageContainer = useRef()
-
+    let title = 'MT | Contact'
     return (
-        <ThreeBackground>
+        <ThreeBackground title={title} description=''
+                         keywords='' isPost={false} index={false}>
             <NameDisk/>
 
             <div className='main'>
@@ -22,7 +23,7 @@ export default function Contact() {
 
                 <div className={ContactStyle.bottom}>
                     <p>Want to work together?</p>
-                    <p>Email me at <a href="mailto:mitchell444999@protonmail.com" className={ContactStyle.emailLink}>mitchell444999@protonmail.com</a>.</p>
+                    <p>Email me at <a href='mailto:mitchell444999@protonmail.com' className={ContactStyle.emailLink}>mitchell444999@protonmail.com</a>.</p>
                 </div>
             </div>
         </ThreeBackground>

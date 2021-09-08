@@ -7,8 +7,10 @@ import * as ProjectStyle from '../styles/project.module.scss'
 
 export default function Project({data}) {
     data = data.allStrapiProject.nodes[0]
+    let title = 'MT | ' + data.title
     return (
-        <DefaultLayout>
+        <DefaultLayout title={title} description=''
+                       keywords='' isPost={true} index={false}>
             <GatsbyImage 
                 image={data.cover_image.localFile.childImageSharp.gatsbyImageData}
                 alt={data.cover_image.alternativeText}
