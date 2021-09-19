@@ -3,6 +3,7 @@ import {graphql} from 'gatsby'
 import DefaultLayout from '../../layouts/Default'
 import * as AboutStyle from '../../styles/about.module.scss'
 import { GatsbyImage } from 'gatsby-plugin-image'
+import Markdown from 'markdown-to-jsx'
 
 export default function About({data}) {
     data = data.allStrapiAbout.nodes[0]
@@ -54,9 +55,9 @@ export default function About({data}) {
                 </div>
 
                 <div className={AboutStyle.aboutTextContainer}>
-                    <p className={AboutStyle.aboutParagraph}>
-                        {data.body}
-                    </p> 
+                    <Markdown 
+                        children={data.body}
+                        className={AboutStyle.aboutParagraph}/>
                 </div>
             </div>
         </DefaultLayout>
