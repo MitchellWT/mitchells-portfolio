@@ -16,3 +16,29 @@
 .projectParagraph {
     text-align: justify;
 }
+
+.techHeading {
+    font-weight: 900;
+}
+
+.techContainer {
+    display: flex;
+    column-gap: 15px;
+    margin: 25px 0;
+}
+
+.additionalImage {
+    padding: 25px;
+}
+
+.additionalImage > picture > img {
+    object-fit: contain !important;
+}
+
+// Mobile
+
+@media only screen and (max-width: 600px) {
+    .techContainer {
+        width: 200px;
+    }
+}

@@ -20,6 +20,6 @@ module.exports = {
                 singleTypes: ["index", "about"],
                 queryLimit: 1000,
             },
-        }
+        },
     ],
 };
